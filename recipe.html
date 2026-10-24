@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Explore delicious recipes, ingredients, and cooking instructions."
+    />
+
+    <title>Recipe Details | TheMealDB</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/recipe.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">ym</span>
+          <span>Yu<span class="logo-accent">Meal</span></span>
+        </a>
+
+        <a href="index.html" class="text-link">
+          ← Back to Home
+        </a>
+      </nav>
+    </header>
+
+    <main class="recipe-page container">
+      <!-- Loading State -->
+      <div class="recipe-loading" id="recipeLoading">
+        <div class="loading-spinner"></div>
+
+        <p>Preparing something delicious...</p>
+      </div>
+
+      <!-- Recipe Content -->
+      <article class="recipe-content" id="recipeContent" hidden>
+        <!-- Breadcrumb -->
+        <nav class="recipe-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+
+          <span>/</span>
+
+          <span id="breadcrumbMeal">Recipe</span>
+        </nav>
+
+        <!-- Recipe Header -->
+        <section class="recipe-header">
+          <div class="recipe-heading-content">
+            <div class="recipe-tags">
+              <span class="recipe-tag" id="recipeCategory"></span>
+
+              <span class="recipe-tag recipe-tag-area" id="recipeArea"></span>
+            </div>
+
+            <h1 id="recipeTitle"></h1>
+
+            <p class="recipe-intro" id="recipeIntro">
+              Discover the ingredients and instructions for this meal.
+            </p>
+
+            <div class="recipe-actions">
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="favoriteRecipeBtn"
+              >
+                ♡ Save Recipe
+              </button>
+
+              <a
+                class="btn btn-secondary"
+                id="recipeVideo"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                hidden
+              >
+                Watch Cooking Video ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="recipe-hero-image">
+            <img id="recipeImage" src="" alt="" />
+          </div>
+        </section>
+
+        <!-- Ingredients and Instructions -->
+        <section class="recipe-body">
+          <aside class="ingredients-panel">
+            <div class="recipe-section-heading">
+              <span class="eyebrow">WHAT YOU NEED</span>
+
+              <h2>Ingredients</h2>
+
+              <p id="ingredientCount"></p>
+            </div>
+
+            <ul class="ingredient-list" id="ingredientList"></ul>
+          </aside>
+
+          <section class="instructions-panel">
+            <div class="recipe-section-heading">
+              <span class="eyebrow">LET'S GET COOKING</span>
+
+              <h2>Instructions</h2>
+            </div>
+
+            <div class="instruction-list" id="instructionList"></div>
+
+            <a
+              class="recipe-source"
+              id="recipeSource"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+            >
+              View Original Recipe ↗
+            </a>
+          </section>
+        </section>
+      </article>
+
+      <!-- Error State -->
+      <section class="recipe-error" id="recipeError" hidden>
+        <h1>We couldn't find this recipe.</h1>
+
+        <p>
+          The recipe may not exist, or we couldn't retrieve it right now.
+        </p>
+
+        <a href="index.html" class="btn btn-primary">
+          Back to Home
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">ym</span>
+          <span>Yu<span class="logo-accent">Meal</span></span>
+        </a>
+
+        <p>Discover something delicious, one recipe at a time.</p>
+
+        <p class="footer-credit">
+          Powered by
+          <a
+            href="https://www.themealdb.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TheMealDB
+          </a>
+        </p>
+      </div>
+      <div class="footer-credit">
+        Designed & Developed by
+        <a
+          href="https://github.com/Micaxa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Micaxa
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/recipe.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Favorites | TheMealDB</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">ym</span>
+          <span>Yu<span class="logo-accent">Meal</span></span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+        
+          <li>
+            <a href="categories.html" class="nav-link">Categories</a>
+          </li>
+        
+          <li>
+            <a
+              href="favorites.html"
+              class="nav-link active"
+              aria-current="page"
+            >
+              Favorites
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <section class="page-heading">
+        <span class="section-eyebrow">YOUR PERSONAL COLLECTION</span>
+
+        <h1>My Favorite Recipes</h1>
+
+        <p>
+          All the delicious meals you've saved, collected in one place.
+        </p>
+      </section>
+
+      <!-- FAVORITES STATUS -->
+      <p id="favoritesStatus" class="status-message" aria-live="polite">
+        Loading your favorites...
+      </p>
+
+      <!-- FAVORITES GRID -->
+      <section
+        id="favoritesGrid"
+        class="meal-grid"
+        aria-label="Favorite recipes"
+      ></section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">ym</span>
+          <span>Yu<span class="logo-accent">Meal</span></span>
+        </a>
+
+        <p>Discover something delicious, one recipe at a time.</p>
+
+        <p class="footer-credit">
+          Powered by
+          <a
+            href="https://www.themealdb.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TheMealDB
+          </a>
+        </p>
+      </div>
+      <div class="footer-credit">
+        Designed & Developed by
+        <a
+          href="https://github.com/Micaxa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Micaxa
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+/* =========================
+   TABLETS AND SMALL LAPTOPS
+========================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    gap: 35px;
+    padding-block: 55px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: -1.8px;
+  }
+
+  .hero-image {
+    height: 340px;
+  }
+
+  .meal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .navbar {
+    min-height: 68px;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: -16px;
+    right: -16px;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 12px 16px 18px;
+
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 12px 8px;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+    gap: 42px;
+
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 9vw, 3.6rem);
+  }
+
+  .hero-content > p {
+    font-size: 0.96rem;
+  }
+
+  .hero-visual {
+    width: min(100%, 480px);
+    margin-inline: auto;
+  }
+
+  .hero-image {
+    height: auto;
+    aspect-ratio: 1 / 0.85;
+  }
+
+  .floating-card {
+    left: -5px;
+    bottom: 20px;
+
+    padding: 12px 14px;
+  }
+
+  .decoration-one {
+    right: -8px;
+  }
+
+
+  /* Sections */
+
+  .categories-section,
+  .meals-section {
+    padding-block: 45px;
+  }
+
+  .meals-section {
+    padding-top: 20px;
+    padding-bottom: 65px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .category-list {
+    gap: 10px;
+  }
+
+  .category-chip {
+    padding: 9px 12px;
+    font-size: 0.85rem;
+  }
+
+  .meal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .meal-card-content {
+    padding: 14px;
+  }
+
+  .meal-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .meal-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+
+  /* Footer */
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE PHONES
+========================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: -1.6px;
+  }
+
+  .eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 1.2px;
+  }
+
+  .search-form {
+    gap: 6px;
+    min-height: 58px;
+  }
+
+  .search-icon {
+    padding-left: 6px;
+  }
+
+  .search-form input {
+    font-size: 0.82rem;
+  }
+
+  .search-form .btn {
+    padding: 10px 13px;
+    font-size: 0.85rem;
+  }
+
+  .hero-tags {
+    gap: 7px;
+  }
+
+  .hero-tags > span {
+    width: 100%;
+  }
+
+  .floating-card {
+    left: -3px;
+    bottom: 15px;
+
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .floating-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+
+  .floating-card strong {
+    font-size: 0.75rem;
+  }
+
+  .floating-card p {
+    font-size: 0.68rem;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .meal-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .meal-card-content {
+    padding: 18px;
+  }
+
+  .meal-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .meal-card-footer {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .favorite-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ========================================
+   CATEGORIES & FAVORITES: MOBILE LAYOUT
+======================================== */
+
+@media (max-width: 768px) {
+  body:has(#categoriesGrid) .page-heading,
+  body:has(#favoritesGrid) .page-heading {
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+
+  body:has(#categoriesGrid) .page-heading h1,
+  body:has(#favoritesGrid) .page-heading h1 {
+    font-size: clamp(2rem, 6vw, 2.7rem);
+    letter-spacing: -1px;
+  }
+
+  body:has(#categoriesGrid) .category-grid {
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 48px;
+  }
+
+  body:has(#categoriesGrid) .category-card-content {
+    padding: 20px;
+  }
+
+  body:has(#categoriesGrid) #categoryMealsSection {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+
+  body:has(#categoriesGrid) #categoryMealsSection .section-heading {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  body:has(#categoriesGrid) .back-button {
+    flex-shrink: 0;
+  }
+
+  body:has(#favoritesGrid) #favoritesGrid {
+    margin-bottom: 40px;
+  }
+
+  body:has(#categoriesGrid) .site-footer,
+  body:has(#favoritesGrid) .site-footer {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  body:has(#categoriesGrid) .page-heading,
+  body:has(#favoritesGrid) .page-heading {
+    padding-top: 30px;
+  }
+
+  body:has(#categoriesGrid) .page-heading h1,
+  body:has(#favoritesGrid) .page-heading h1 {
+    font-size: 2rem;
+  }
+
+  body:has(#categoriesGrid) .page-heading > p,
+  body:has(#favoritesGrid) .page-heading > p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  body:has(#categoriesGrid) .page-heading .section-eyebrow,
+  body:has(#favoritesGrid) .page-heading .section-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.7px;
+  }
+
+  body:has(#categoriesGrid) .category-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  body:has(#categoriesGrid) .category-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  body:has(#categoriesGrid) .category-card-content {
+    padding: 18px;
+  }
+
+  body:has(#categoriesGrid) .category-explore-btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  body:has(#categoriesGrid) #categoryMealsSection .section-heading {
+    flex-direction: column;
+  }
+
+  body:has(#categoriesGrid) .back-button {
+    width: 100%;
+  }
+
+  body:has(#favoritesGrid) #favoritesGrid .empty-state {
+    padding: 42px 18px;
+  }
+
+  body:has(#categoriesGrid) .site-footer,
+  body:has(#favoritesGrid) .site-footer {
+    padding: 24px 0;
+  }
+}

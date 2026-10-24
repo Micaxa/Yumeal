@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Categories | TheMealDB</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">ym</span>
+          <span>Yu<span class="logo-accent">Meal</span></span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+        
+          <li>
+            <a
+              href="categories.html"
+              class="nav-link active"
+              aria-current="page"
+            >
+              Categories
+            </a>
+          </li>
+        
+          <li>
+            <a href="favorites.html" class="nav-link">Favorites</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <section class="page-heading">
+        <span class="section-eyebrow">EXPLORE YOUR NEXT MEAL</span>
+
+        <h1>Recipe Categories</h1>
+
+        <p>
+          Discover recipes from different categories and find something
+          delicious to prepare.
+        </p>
+      </section>
+
+      <!-- CATEGORY STATUS -->
+      <p id="categoriesStatus" class="status-message" aria-live="polite">
+        Loading categories...
+      </p>
+
+      <!-- CATEGORY GRID -->
+      <section
+        id="categoriesGrid"
+        class="category-grid"
+        aria-label="Recipe categories"
+      ></section>
+
+      <!-- SELECTED CATEGORY -->
+      <section id="categoryMealsSection" hidden>
+        <div class="section-heading">
+          <div>
+            <span class="section-eyebrow">EXPLORE RECIPES</span>
+            <h2 id="selectedCategoryTitle">Recipes</h2>
+          </div>
+
+          <button id="backToCategories" class="back-button" type="button">
+            ← All Categories
+          </button>
+        </div>
+
+        <p id="categoryMealsStatus" class="status-message" aria-live="polite">
+        </p>
+
+        <div id="categoryMealsGrid" class="meal-grid"></div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">ym</span>
+          <span>Yu<span class="logo-accent">Meal</span></span>
+        </a>
+
+        <p>Discover something delicious, one recipe at a time.</p>
+
+        <p class="footer-credit">
+          Powered by
+          <a
+            href="https://www.themealdb.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TheMealDB
+          </a>
+        </p>
+      </div>
+      <div class="footer-credit">
+        Designed & Developed by
+        <a
+          href="https://github.com/Micaxa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Micaxa
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>
