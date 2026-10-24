@@ -66,7 +66,7 @@ async function loadRecipe() {
 // =========================
 
 function renderRecipe(meal) {
-  document.title = `${meal.strMeal} | TheMealDB`;
+  document.title = `${meal.strMeal} | Yumeal`;
 
   recipeTitle.textContent = meal.strMeal;
   breadcrumbMeal.textContent = meal.strMeal;

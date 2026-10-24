@@ -1365,3 +1365,7 @@ body:has(#favoritesGrid) #favoritesGrid .empty-state p {
     transition: none;
   }
 }
+/* Respect the hidden attribute */
+[hidden] {
+  display: none !important;
+}

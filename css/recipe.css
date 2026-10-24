@@ -361,3 +361,8 @@
   color: var(--primary-dark);
   text-decoration: underline;
 }
+
+/* Ensure hidden elements stay hidden */
+[hidden] {
+  display: none !important;
+}
